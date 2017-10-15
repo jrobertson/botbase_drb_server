@@ -9,11 +9,12 @@ require 'botbase'
 
 class BotBaseDRbServer
 
-  def initialize(host: 'localhost', port: '60600', 
-                config: '')
+  def initialize(host: 'localhost', port: '60600', config: '', 
+                 notifier: nil, debug: false)
 
     @host, @port = host, port
-    @bot = BotBase.new(config)
+    @bot = BotBase.new(config, notifier: notifier, debug: debug)
+
 
   end
 
